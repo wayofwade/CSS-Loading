@@ -1,0 +1,50 @@
+<html>
+    <head>
+        Css-loading
+    </head>
+    <body>        
+        <div class="more">
+			<!-- 上下动的图片 -->
+			<img class="more-img" style="position: absolute; width: 100%;height: 40%; z-index: 10" 
+            src="./loadingImg.png" />
+			<!-- 内容 -->
+            <div style="opacity: 0">
+                <div style="height: 600">
+                    <div id="child" style="display: flex; justify-content: center; flex-direction: row">
+                            <div style="height: 400; background: lightblue; overflow: hidden">
+                                这个是加载中的内容这个是加载中的内容这个是加载中 的内容这个是加载中的内容这个是加载中
+                                的内容这个是加载中的内容这个是加载中的
+                            </div>
+                    </div>
+                </div>
+            </div>
+			<!-- 蒙层 -->
+			<div style="top: 0;left: 0;width: 100%;height: 100%;position: absolute;background: #FAFAFA" >
+            </div>
+		</div>
+    </body>
+    </script>
+    <style>
+        .more {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 20px;
+            overflow: hidden;
+        }
+        .more-img {
+            transition-timing-function: linear;
+            -webkit-animation: mymove  1.6s infinite;
+            animation: myMove 1.6s infinite;
+            animation-direction:normal ;
+        }
+        @keyframes myMove {
+            0% {
+            top: -20%;
+            }
+            100% {
+            top: 100%;
+            }
+        }
+        </style>
+</html>
